@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="sec">
+    <section class="s1">
+        <main>
+            <div class="d1">
+                <p class='p1' style="font-size:35px;">Cat Or Dog ?</p>
+                <hr>
+                <p class="p2">Classification model based on Convolution Neural Network (CNN) </p>
+                <div class="cnn"><img class="cat_or_dog" src="/static/images/neural-networks-removebg-previewB.png" alt=""></div>
+            </div>
+            <div class="d2">
+                This web app will identify images of cats and dogs 
+            </div>
+        </main>
+        
+    </section>
+
+    <section class="s2">
+            <div class="upload">
+                <div class="upload_categ_img">
+                    <div class="up">
+                        <label for="">Upload your image  </label>
+                        <br>
+                        <br>
+                        <form action="{{url_for('image')}}" method="post" id="file-form">
+                            <input type="file" name="file" id="file">
+                          <button type="submit" class="submit">Click here</button> 
+                        </form>
+                    </div>
+                </div>
+                <div class="chartBox">
+                    <canvas id="myChart" ></canvas>
+                  </div>
+            </div>
+            
+            <div class="categ_img" >
+                <div class="pred_img" ><img class="pred_img" src="/static/images/ing.jpg" alt=""></div>
+                <div class="predict_img"></div>
+                </div>
+    </section>
+</div>
+
+<footer class="footer" >
+    <div class="container" >
+        <div class="row" > 
+
+                <div class="footer-col" > 
+                    <h4>EMAIL</h4>
+                    <ul>
+                        <li> info@p2m.ma </li>
+                     </ul>
+                </div>
+                <div class="footer-col" > 
+                    <h4>WHATSSAPP </h4>
+                    <ul>
+                        <li> (+212)6 04 44 06 84</li>
+                        
+                     </ul>
+                </div>
+
+                <div class="footer-col" > 
+                <h4>ADRESS</h4>
+                <ul>
+                    <li> Technopark souss mass TA 209 Agadir Maroc </li>
+                 </ul>
+                </div>
+            <div class="footer-col" > 
+                <h4>SOCIAL MEDIA</h4>
+                <div class="social-link">
+                     <a href="#" > <i class="fab fa-facebook-f"> </i> </a>
+                     <a href="#" > <i class="fab fa-instagram"> </i> </a>
+                     <a href="#" > <i class="fab fa-twitter"> </i> </a>
+                     <a href="#" ><i class="fab fa-linkedin-in"> </i> </a> 
+                </div>
+            </div>
+            
+           
+        </div>
+     </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+{% endblock %}
